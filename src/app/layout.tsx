@@ -1,3 +1,4 @@
+import QueryProvider from "@/components/providers/QueryProvider";
 import "./globals.css";
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
@@ -41,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dm_sans.className} antialiased overflow-y-auto`}>
-        {children}
+        <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   );
