@@ -20,7 +20,7 @@ export default function Search({ value, setValue }: SearchBigProps) {
         <input
           type="text"
           placeholder="Search events..."
-          className="w-full pl-10 text-base border relative border-gray-300 rounded-sm placeholder:text-[1.1rem] placeholder:text-gray-500 placeholder:text-xs focus:outline-none focus:border-gray-500 px-3 py-2 transition-transform focus:scale-101 duration-200 ease-in-out "
+          className="w-full pl-10 text-base border relative border-gray-300 rounded-sm placeholder:text-[1.1rem] placeholder:text-gray-500 placeholder:text-xs focus:outline-none focus:border-gray-500 px-3 py-2 transition-transform duration-200 ease-in-out "
           onChange={handleSearch}
           value={value}
         />

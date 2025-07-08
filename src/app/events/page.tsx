@@ -5,6 +5,7 @@ import group from "../../../public/images/group-image.jpg";
 import Image from "next/image";
 import TabsMini from "@/components/ui/TabsMini";
 import Search from "@/components/ui/Search";
+import EventCard from "@/components/features/EventCard";
 
 export const eventsTab = [
   {
@@ -45,6 +46,39 @@ export default function Events() {
         <Search value={value} setValue={setValue} />
         <TabsMini tabs={eventsTab} />
       </div>
+
+      <section className="my-14 space-y-20">
+        <EventCard
+          Date="16th May, 2025"
+          Title="Catchy Title About Some Event"
+          EventDate="September 30, 2025"
+          Location="S.L. Edu Hall"
+          Description="From tech talks to hackathons, campus meetups to code sprints — NACOS events are where ideas spark and connections grow. Whether you’re looking to learn something new, build your network, or just vibe with fellow tech heads, there’s always something happening."
+        />
+        <EventCard
+          Date="16th May, 2025"
+          Title="Catchy Title About Some Event"
+          EventDate="September 30, 2025"
+          Location="S.L. Edu Hall"
+          imgEnd={true}
+          Description="From tech talks to hackathons, campus meetups to code sprints — NACOS events are where ideas spark and connections grow. Whether you’re looking to learn something new, build your network, or just vibe with fellow tech heads, there’s always something happening."
+        />
+        <EventCard
+          Date="16th May, 2025"
+          Title="Catchy Title About Some Event"
+          EventDate="September 30, 2025"
+          Location="S.L. Edu Hall"
+          Description="From tech talks to hackathons, campus meetups to code sprints — NACOS events are where ideas spark and connections grow. Whether you’re looking to learn something new, build your network, or just vibe with fellow tech heads, there’s always something happening."
+        />
+        <EventCard
+          Date="16th May, 2025"
+          Title="Catchy Title About Some Event"
+          EventDate="September 30, 2025"
+          Location="S.L. Edu Hall"
+          imgEnd={true}
+          Description="From tech talks to hackathons, campus meetups to code sprints — NACOS events are where ideas spark and connections grow. Whether you’re looking to learn something new, build your network, or just vibe with fellow tech heads, there’s always something happening."
+        />
+      </section>
     </main>
   );
 }
