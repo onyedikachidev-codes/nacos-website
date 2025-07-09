@@ -15,7 +15,7 @@ export default function Search({ value, setValue }: SearchBigProps) {
   }
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 pl-4.5">
       <div className="relative w-85">
         <input
           type="text"
