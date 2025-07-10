@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-import event from "../../../../public/images/event.jpg";
 import { Calendar1Icon, MapPin } from "lucide-react";
 import Link from "next/link";
+import event from "../../../../public/images/event.jpg";
 
 interface EventCardProps {
   Date: string;
@@ -11,7 +11,7 @@ interface EventCardProps {
   EventDate: string;
   Location: string;
   Description: string;
-  slug: string;
+  Slug: string;
   imgEnd?: boolean;
 }
 
@@ -21,7 +21,7 @@ export default function EventCard({
   EventDate,
   Location,
   Description,
-  slug,
+  Slug,
   imgEnd = false,
 }: EventCardProps) {
   return (
@@ -33,7 +33,7 @@ export default function EventCard({
       <div className="relative w-[37.5%]">
         <Image
           src={event}
-          alt="Group of students"
+          alt="Event Image"
           className="object-cover h-65 rounded-sm"
         />
       </div>
@@ -60,8 +60,8 @@ export default function EventCard({
 
         <p>{Description}</p>
 
-        <Link className="mt-auto" href={`/events/${slug}`}>
-          <button className=" translate-y-1 inline-flex w-max bg-green-600 text-white font-medium px-4 py-2 rounded-sm shadow-md hover:bg-green-700">
+        <Link className="mt-auto cursor-pointer" href={`/events/${Slug}`}>
+          <button className=" translate-y-1 inline-flex w-max bg-green-600 text-white font-medium px-4 py-2 rounded-sm shadow-md hover:bg-green-700 cursor-pointer">
             Read more <span className="text-sm pl-2">→</span>
           </button>
         </Link>
