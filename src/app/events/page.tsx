@@ -6,18 +6,7 @@ import TabsMini from "@/components/ui/TabsMini";
 import Search from "@/components/ui/Search";
 import EventCard from "@/components/features/EventCard";
 import PageBanner from "@/components/ui/PageBanner";
-
-export const eventsTab = [
-  {
-    name: "Current Events",
-    path: "/events",
-    exact: true,
-  },
-  {
-    name: "Past Events",
-    path: "/events/past-events",
-  },
-];
+import { eventsTab } from "../../components/ui/eventsTab";
 
 export default function Events() {
   const [value, setValue] = useState("");
