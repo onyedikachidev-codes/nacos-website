@@ -2,6 +2,8 @@ import QueryProvider from "@/components/providers/QueryProvider";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
+import Navbar from "@/components/ui/Navbar";
+import Footer from "@/components/ui/Footer";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -42,7 +44,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lato.className} antialiased overflow-y-auto`}>
-        <QueryProvider>{children}</QueryProvider>
+        <QueryProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </QueryProvider>
       </body>
     </html>
   );
