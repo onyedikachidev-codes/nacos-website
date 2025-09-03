@@ -1,13 +1,15 @@
 import QueryProvider from "@/components/providers/QueryProvider";
 import "./globals.css";
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { Lato } from "next/font/google";
+import Navbar from "@/components/ui/Navbar";
+import Footer from "@/components/ui/Footer";
 
-const dm_sans = DM_Sans({
+const lato = Lato({
   subsets: ["latin"],
-  variable: "--font-dm_sans",
+  variable: "--font-lato",
   display: "swap",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["100", "300", "400", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -41,8 +43,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dm_sans.className} antialiased overflow-y-auto`}>
-        <QueryProvider>{children}</QueryProvider>
+      <body className={`${lato.className} antialiased overflow-y-auto`}>
+        <QueryProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </QueryProvider>
       </body>
     </html>
   );
