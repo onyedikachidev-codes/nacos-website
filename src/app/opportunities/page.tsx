@@ -7,6 +7,7 @@ import { Briefcase } from "lucide-react";
 import OpportunitesCard, {
   OpportunitesCardProps,
 } from "@/components/features/OpportunitiesCard";
+import { oppTab } from "../../components/ui/oppTab";
 
 const oppListings: OpportunitesCardProps[] = [
   {
@@ -60,30 +61,6 @@ const oppListings: OpportunitesCardProps[] = [
     location: "Lekki, Lagos",
     slug: "product-design-intern-two",
     jobType: "Academics",
-  },
-];
-
-export const oppTab = [
-  {
-    name: "All",
-    path: "/opportunities",
-    exact: true,
-  },
-  {
-    name: "Jobs",
-    path: "/events/past-events",
-  },
-  {
-    name: "Interships",
-    path: "/events/past-events",
-  },
-  {
-    name: "Academics",
-    path: "/events/past-events",
-  },
-  {
-    name: "Research",
-    path: "/events/past-events",
   },
 ];
 
